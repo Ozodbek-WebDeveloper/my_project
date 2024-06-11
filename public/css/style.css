@@ -16,6 +16,11 @@
     box-sizing: border-box;
 }
 
+*::before,
+::after {
+    box-sizing: border-box;
+}
+
 .main {
     width: 100%;
     height: 88.7vh;
@@ -57,6 +62,10 @@
     width: 100%;
     padding: 5px;
     border-radius: 5px;
+}
+
+.saidbar .nav .nav-item a.active{
+    background-color: var(--color-active-hover);
 }
 
 .saidbar .nav .nav-item a:hover {
@@ -279,20 +288,275 @@
     background: var(--color-active-hover);
 }
 
-.block_lessons_about .about_left h1{
+.block_lessons_about .about_left h1 {
     color: var(--color-white);
 }
 
-.block_lessons_about .about_left  p{
+.block_lessons_about .about_left p {
     color: var(--color-line);
     font-size: 18px;
 }
-.block_lessons_about .about_left span p  {
+
+.block_lessons_about .about_left span p {
     color: var(--color-btn-light) !important;
     font-size: 15px;
 }
 
 .about_right img {
     max-width: 400px;
+    border-radius: 10px;
+}
+
+/* -------------------------------------------lessons_one_top- */
+.lessons_one_top {
+    background: var(--color-active-hover);
+}
+
+.lessons_one_top_text {
+    color: var(--color-white);
+}
+
+.lessons_one_top_item span {
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.lessons_one_top_item span i {
+    margin-right: 10px;
+    color: var(--color-btn-light);
+}
+
+.top_item_right {
+    margin-left: 150px !important;
+}
+
+/* -----------------accordion start */
+
+
+
+.accordion {
+    background-color: var(--color-active-hover);
+}
+
+.accordion .accordion-item {
+    border: none;
+    background-color: var(--color-active-hover);
+}
+
+.accordion .accordion-item button[aria-expanded='true'] {
+    border-bottom: 1px solid #03b5d2;
+}
+
+.accordion button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: #7288a2;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.accordion button:hover,
+.accordion button:focus {
+    cursor: pointer;
+    color: #03b5d2;
+}
+
+.accordion button:hover::after,
+.accordion button:focus::after {
+    cursor: pointer;
+    color: #03b5d2;
+    border: 1px solid #03b5d2;
+}
+
+.accordion button .accordion-title {
+    padding: 1em 1.5em 1em 0;
+}
+
+.accordion button .icon {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid;
+    border-radius: 22px;
+}
+
+.accordion button .icon::before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 9px;
+    left: 5px;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+}
+
+.accordion button .icon::after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 5px;
+    left: 9px;
+    width: 2px;
+    height: 10px;
+    background: currentColor;
+}
+
+.accordion button[aria-expanded='true'] {
+    color: #03b5d2;
+}
+
+.accordion button[aria-expanded='true'] .icon::after {
+    width: 0;
+}
+
+.accordion button[aria-expanded='true']+.accordion-content {
+    opacity: 1;
+    max-height: 9em;
+    transition: all 200ms linear;
+    will-change: opacity, max-height;
+}
+
+.accordion .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+}
+
+.accordion .accordion-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 2em 0;
+    color: var(--color-white);
+}
+
+/* ---------- */
+.block_lessons_one_start {
+    box-shadow: inset 0px 0px 10px 10px #4299e1;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.block_lessons_one_start h4 {
+    color: var(--color-white);
+}
+
+.block_lessons_one_start h1 {
+    color: var(--color-white);
+}
+
+.block_lessons_one_start button {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--color-btn-light);
+    margin-top: 10px;
+}
+
+.block_lessons_one_start hr {
+    margin: 0 !important;
+    color: var(--color-line);
+}
+
+/* ************************************************************************ lesson  page start */
+
+.block_less {
+    padding: 20px;
+}
+
+.block_less_video video {
+    width: 100%;
+}
+
+
+/* -------- acc */
+.acc-kontainer {
+    width: 100%;
+    margin: auto;
+}
+
+.acc-kontainer .acc-body {
+    width: 98%;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    height: 0;
+    color: rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.2);
+    line-height: 28px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.acc-kontainer label {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+    padding: 15px;
+    width: 100%;
+    color: #fff;
+    font-weight: 400;
+    box-sizing: border-box;
+    z-index: 100;
+    font-size: 20px;
+}
+
+.acc-kontainer input {
+    display: none;
+}
+
+.acc-kontainer label:before {
+    font-family: 'FontAwesome';
+    content: '\f067';
+    font-weight: bolder;
+    float: right;
+}
+
+.acc-kontainer input:checked+label {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.acc-kontainer input:checked+label:before {
+    font-family: 'FontAwesome';
+    content: '\f00d';
+    transition: 0.5s;
+}
+
+.acc-kontainer input:checked~.acc-body {
+    height: auto;
+    color: #fff;
+    font-size: 16px;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.block_lesson_end{
+    background-color: var(--color-active-hover);
+}
+
+.block_lesson_end h1{
+    color: var(--color-white);
+}
+
+.block_lesson_end button{
+    padding: 10px 25px;
+    background: var(--color-btn-light);
+    border: none;
     border-radius: 10px;
 }
