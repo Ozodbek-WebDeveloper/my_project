@@ -300,7 +300,6 @@ body {
 /* .block_modul_card */
 .block_modul_card img {
     width: 100%;
-    height: 60%;
     border-radius: 5px;
 }
 
@@ -339,8 +338,10 @@ body {
     border-radius: 50%;
     background: var(--color-white);
     margin-top: 12px;
-    margin-right: 12px;
+    margin-right: 12px; 
 }
+
+
 
 .block_lessons_about {
     background: var(--color-active-hover);
@@ -355,15 +356,23 @@ body {
     font-size: 18px;
 }
 
+@media(max-width:1140px){
+    .block_lessons_about .about_left p {
+        font-size: 15px;
+    }
+}
+
 .block_lessons_about .about_left span p {
     color: var(--color-btn-light) !important;
     font-size: 15px;
 }
 
 .about_right img {
-    max-width: 400px;
+    width: 100%;
     border-radius: 10px;
 }
+
+
 
 /* -------------------------------------------lessons_one_top- */
 .lessons_one_top {
@@ -389,6 +398,12 @@ body {
 
 .top_item_right {
     margin-left: 150px !important;
+}
+
+@media(max-width:1140px){
+    .top_item_right{
+        margin-left: 20px !important;
+    }
 }
 
 /* -----------------accordion start */
