@@ -21,28 +21,77 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow: hidden;
+}
+
+.offcanvas{
+    background: var(--color-dark);
+}
+
+
+.offcanvas .btn-close{
+    /* color: var(--color-white) !important; */
+    color: red !important;
+    background-color: white !important;
+}
+
 .main {
     width: 100%;
-    height: 88.7vh;
+    height: 100vh !important;
     overflow: hidden;
     background-color: var(--color-site_bg);
+    overflow-y: scroll;
+    margin-top: 80px;
+    padding-bottom: 70px;
+}
+
+
+.main::-webkit-scrollbar {
+    display: none;
 }
 
 
 
 /* ----- navbar start */
 .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: var(--color-dark) !important;
     border-bottom: 0.5px solid var(--color-line);
+}
+
+@media(max-width:576px) {
+    .navbar_menu {
+        display: block !important;
+    }
+
 }
 
 /* --------------------  main start */
 
 .saidbar {
     background-color: var(--color-dark);
-    height: 100%;
+    height: 100vh;
     padding: 20px;
+    overflow-y: scroll;
 }
+
+.saidbar::-webkit-scrollbar {
+    display: none;
+}
+
+
+.home_link{
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
 
 .saidbar_text_saxifa {
     color: var(--color-white);
@@ -64,7 +113,7 @@
     border-radius: 5px;
 }
 
-.saidbar .nav .nav-item a.active{
+.saidbar .nav .nav-item a.active {
     background-color: var(--color-active-hover);
 }
 
@@ -82,14 +131,16 @@
 
 /* *********************************************main content start********************** */
 
-.col-10 {
-    height: 100%;
+.main_content {
+    height: 100vh;
+    overflow: hidden;
     overflow-y: scroll;
 }
 
-.col-10::-webkit-scrollbar {
+.main_content::-webkit-scrollbar {
     display: none;
 }
+
 
 
 /* -----------------------------  start block one  */
@@ -105,22 +156,27 @@
 
 .block_one .block_one_img {
     width: 100%;
-    height: 100%;
+    height: 100% !important;
     border-radius: 10px 0 0 10px;
     background: rgb(59, 129, 243);
     background: linear-gradient(90deg, rgba(59, 129, 243, 1) 0%, rgba(2, 8, 23, 1) 100%);
+    overflow: hidden;
 }
+
+
 
 .block_one .block_one_item {
     width: 100% !important;
-    height: 100% !important;
-    padding: 100px 0;
+    height: 384px !important;
     padding-left: 10px;
     /* background-color: red; */
     border-radius: 0 10px 10px 0;
     flex-grow: 1;
     background: rgb(2, 8, 23);
     background: linear-gradient(90deg, rgba(2, 8, 23, 1) 0%, rgba(29, 40, 58, 1) 100%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .block_one .block_one_item .block_one_text h3 {
@@ -150,7 +206,7 @@
 
 .block_two_item {
     width: 100%;
-    height: 100%;
+    height: 384px !important;
     background: rgb(30, 41, 59);
     background: linear-gradient(90deg, rgba(30, 41, 59, 1) 0%, rgba(2, 8, 23, 1) 100%);
     border-radius: 10px 0 0 10px;
@@ -191,6 +247,7 @@
     background: rgb(2, 8, 23);
     background: linear-gradient(90deg, rgba(2, 8, 23, 1) 0%, rgba(57, 127, 241, 1) 100%);
     border-radius: 0 10px 10px 0;
+    overflow: hidden;
 }
 
 /* ---------------------  block_three_start */
@@ -200,6 +257,7 @@
 }
 
 .block_three_box_border {
+    width: 100%;
     border: 1px solid var(--color-line);
     border-radius: 10px;
 }
@@ -546,15 +604,15 @@
     transition: 0.5s;
 }
 
-.block_lesson_end{
+.block_lesson_end {
     background-color: var(--color-active-hover);
 }
 
-.block_lesson_end h1{
+.block_lesson_end h1 {
     color: var(--color-white);
 }
 
-.block_lesson_end button{
+.block_lesson_end button {
     padding: 10px 25px;
     background: var(--color-btn-light);
     border: none;

@@ -1,5 +1,6 @@
 /* CSS */
 .button-92 {
+  width: 50%;
   --c: #fff;
   /* text color */
   background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p, 100%)/300% no-repeat,
@@ -13,6 +14,28 @@
   outline-offset: .1em;
   transition: 0.3s;
 }
+
+@media(max-width:1296px) {
+  .button-92 {
+    font-size: 18px !important;
+  }
+}
+
+@media(max-width:768px) {
+  .button-92 {
+    width: 70%;
+    font-size: 18px !important;
+  }
+}
+
+@media(max-width:602px) {
+  .button-92 {
+    width: 80%;
+    font-size: 18px !important;
+  }
+}
+
+
 
 .button-92:hover,
 .button-92:focus-visible {
